@@ -44,24 +44,13 @@ export const Tarea=()=>{
     const [edit, setEdit] = useState(false)
     const [buttonSubmitText, setButtonSubmitText] = useState('Editar')
     const [indexToEdit, setIndexToEdit] = useState(0)
-    const modalStyle = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        zIndex: 1,
-        backgroundColor: '#9ea3c1;',
-        padding: '20px',
-        borderRadius: '15px',
-        boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
-    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(id==''||name==''||career==''||imageUrl==''){
+        if(id===''||name===''||career===''||imageUrl===''){
             alert('LLENA LOS CAMPOS FALTANTES')
         }else{
-            if(edit==false){
+            if(edit===false){
                 setAlumn([...alumn,{id:id,name:name,career:career,image:imageUrl}])
             }else{
                 alumn[indexToEdit]={...alumn[indexToEdit],id:id,name:name,career:career,image:imageUrl}
@@ -157,7 +146,7 @@ export const Tarea=()=>{
                                 <td>{item.id}</td>
                                 <td>{item.name}</td>
                                 <td>{item.career}</td>
-                                <td><img src={item.image} width={"200px"} height={"100px"}/></td>
+                                <td><img alt="foto" src={item.image} width={"200px"} height={"100px"}/></td>
                                 <td><Button id={"buttonAdd"} onClick={()=>editElement(index)}>Editar</Button></td>
                                 <td><Button id={"buttonCancel"} onClick={()=>deleteElement(item.id)}>Eliminar</Button></td>
                             </tr>

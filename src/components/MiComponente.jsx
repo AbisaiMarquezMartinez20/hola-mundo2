@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 const MiComponente = () => {
-  let pasta = "abisai"
+ 
 
   const miEvento = (edad,genero) => {
    let nombre = "abisai "

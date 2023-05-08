@@ -4,7 +4,7 @@ let i =0
      const Hook = () =>{
 
         const [titulo,setTitulo]=useState('Este es el titulo original')
-    const[preveSate,setPreveState]=useState('')
+    const[setPreveState]=useState('')
 
        const changeTitle =() => {
           i++
